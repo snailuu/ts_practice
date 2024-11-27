@@ -26,3 +26,10 @@ export type TrimStrLeft<Str extends string> =
     ? TrimStrLeft<Rest> : Str;
 
 export type TrimStr<Str extends string> = TrimStrRight<TrimStrLeft<Str>>;
+
+export type CapitalizeStr<Str extends string> = Str extends `${infer First}${string}` ? `${Uppercase<First>}${Str}` : Str;
+
+export type CamelCase<Str extends string> = 
+    Str extends `${infer Left}_${infer Right}${infer Rest}`
+        ? `${Left}${Uppercase<Right>}${CamelCase<Rest>}`
+        : Str;

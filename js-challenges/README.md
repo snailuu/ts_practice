@@ -4,5 +4,5 @@
 
 ## 已完成列表
 
-- [ ]  [Promise.all](./Promise.all.js)
-- [ ]  [JSON2DOM](./JSON2DOM.js)
+- [x]  [Promise.all](./Promise.all.js)
+- [x]  [JSON2DOM](./JSON2DOM.js)

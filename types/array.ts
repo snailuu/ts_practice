@@ -9,3 +9,5 @@ export type ShiftArray<T extends unknown[]> = T extends [unknown, ...infer Rest]
 export type Push<T extends unknown[], P extends unknown> = P extends unknown[] ? [...T, ...P] : [...T, P]
 
 export type UnShift<T extends unknown[], P extends unknown> = P extends unknown[] ? [...P, ...T] : [P, ...T];
+
+export type ReverseArr<T extends unknown[]> = T extends [infer First, ...infer Rest] ? [...ReverseArr<Rest>, First] : T;
